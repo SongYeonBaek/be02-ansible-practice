@@ -21,7 +21,7 @@ jobs:
           sudo rm -rf /be02-ansible-practice 
           sudo git clone https://github.com/SongYeonBaek/be02-ansible-practice.git
           sudo rm -rf /var/www/html/main.html
-          sudo mv /be02-ansible-practice/*.html /var/www/html
+          sudo mv -f /be02-ansible-practice/*.html /var/www/html
           sudo systemctl reload nginx
 
           
