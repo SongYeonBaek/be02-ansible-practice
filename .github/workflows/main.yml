@@ -18,11 +18,10 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
-          sudo rm -rf /devops
-          sudo mkdir devops
-          sudo cd /devops
-          sudo git clone https://github.com/SongYeonBaek/be02-ansible-practice.git .
-          sudo mv /devops/*.html /var/www/html
+          sudo rm -rf /be02-ansible-practice 
+          sudo git clone https://github.com/SongYeonBaek/be02-ansible-practice.git
+          sudo rm -rf /var/www/html/main.html
+          sudo mv /be02-ansible-practice/*.html /var/www/html
           sudo systemctl reload nginx
 
           
